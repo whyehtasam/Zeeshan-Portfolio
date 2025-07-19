@@ -87,7 +87,7 @@ export default function Hero() {
           <Link href="#projects">
             <Button
               size="lg"
-              className="bg-gradient-to-r from-cyan-500 via-purple-500 fuchsia-400 hover:from-cyan-600 hover:via-purple-600 hover:to-magenta-600 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl w-full sm:w-auto"
+              className="bg-gradient-to-r from-cyan-500 via-purple-500 to-fuchsia-400 hover:from-cyan-600 hover:via-purple-600 hover:to-magenta-600 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl w-full sm:w-auto"
             >
               View My Work
               <ArrowDown className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />

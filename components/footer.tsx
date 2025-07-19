@@ -82,7 +82,7 @@ export default function Footer() {
               Interested in collaboration or have a project in mind? Let's
               connect!
             </p>
-            <Button className="bg-gradient-to-r from-cyan-500 via-purple-500 fuchsia-400 hover:from-cyan-600 hover:via-purple-600 hover:to-magenta-600 text-white w-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+            <Button className="bg-gradient-to-r from-cyan-500 via-purple-500 to-fuchsia-400 hover:from-cyan-600 hover:via-purple-600 hover:to-magenta-600 text-white w-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
               <Download className="h-4 w-4 mr-2" />
               Download Resume
             </Button>

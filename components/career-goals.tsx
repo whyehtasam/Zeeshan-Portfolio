@@ -94,7 +94,7 @@ export default function CareerGoals() {
   return (
     <section id="goals" ref={sectionRef} className=" py-12 sm:py-20 relative">
       {/* Retro Tech Background Pattern */}
-      <div className="absolute inset-0 opacity-50">
+      <div className="absolute inset-0 sm:opacity-50 opacity-5">
         <div className="absolute top-10 left-10 text-6xl">👾</div>
         <div className="absolute top-20 right-20 text-4xl">🚀</div>
         <div className="absolute bottom-20 left-20 text-5xl">⚡</div>
@@ -126,7 +126,7 @@ export default function CareerGoals() {
               >
                 <CardHeader>
                   <div className="flex items-center space-x-4">
-                    <div className="p-3 bg-gradient-to-r from-cyan-500/20 fuchsia-400/20 rounded-full group-hover:from-cyan-500/30 group-hover:fuchsia-400/30 transition-all duration-300">
+                    <div className="p-3 bg-gradient-to-r from-cyan-500/20 to-fuchsia-400/20 rounded-full group-hover:from-cyan-500/30 group-hover:fuchsia-400/30 transition-all duration-300">
                       <IconComponent className="h-6 w-6 text-cyan-400" />
                     </div>
                     <CardTitle className="text-xl font-semibold text-white group-hover:text-cyan-400 transition-colors duration-300">

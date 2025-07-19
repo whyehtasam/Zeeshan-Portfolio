@@ -159,7 +159,7 @@ export default function Timeline() {
       className=" py-12 sm:py-20 relative"
     >
       {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-50">
+      <div className="absolute inset-0 sm:opacity-50 opacity-5">
         <div className="absolute top-10 left-10 text-4xl sm:text-6xl">🎓</div>
         <div className="absolute top-20 right-20 text-3xl sm:text-4xl">💼</div>
         <div className="absolute bottom-20 left-20 text-4xl sm:text-5xl"></div>
@@ -182,7 +182,7 @@ export default function Timeline() {
 
         <div className="timeline-container relative">
           {/* Timeline Line */}
-          <div className="absolute left-8 top-0 w-0.5 bg-gradient-to-b from-cyan-400 to-fuchsia-400 timeline-line" />
+          <div className="absolute left-6 sm:left-7 top-0 w-0.5 bg-gradient-to-b from-cyan-400 to-fuchsia-400 timeline-line " />
 
           <div className="space-y-8">
             {timelineEvents.map((event, index) => {
@@ -202,7 +202,7 @@ export default function Timeline() {
                   </div>
 
                   {/* Content */}
-                  <Card className="flex-1 bg-gray-900/50 border-gray-800 hover:border-cyan-400/50 transition-all duration-300">
+                  <Card className="flex-1 sm:bg-gray-900/50 bg-gray-900 border-gray-800 hover:border-cyan-400/50 transition-all duration-300 ml-6 sm:ml-0 border-cyan-400/50">
                     <CardContent className="pt-6">
                       <div className="flex items-center space-x-2 mb-2">
                         <Calendar className="h-4 w-4 text-cyan-400" />

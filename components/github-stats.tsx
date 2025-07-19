@@ -217,7 +217,7 @@ export default function GitHubStats() {
                 href="https://github.com/zeeshanahmadansari"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500 fuchsia-400 hover:from-cyan-600 hover:to-magenta-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
+                className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-fuchsia-400 hover:from-cyan-600 hover:to-magenta-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
               >
                 <Github className="h-5 w-5" />
                 <span>Visit GitHub Profile</span>

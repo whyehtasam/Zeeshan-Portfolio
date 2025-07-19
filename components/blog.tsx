@@ -148,7 +148,7 @@ export default function Blog() {
         </div>
 
         <div className="text-center mt-12">
-          <Button className="bg-gradient-to-r from-cyan-500 fuchsia-400 hover:from-cyan-600 hover:to-magenta-600 text-white px-8 py-3 text-lg font-semibold transition-all duration-300 hover:scale-105">
+          <Button className="bg-gradient-to-r from-cyan-500 to-fuchsia-400 hover:from-cyan-600 hover:to-magenta-600 text-white px-8 py-3 text-lg font-semibold transition-all duration-300 hover:scale-105">
             View All Posts
             <ArrowRight className="ml-2 h-5 w-5" />
           </Button>

@@ -119,7 +119,7 @@ export default function Contact() {
       className="py-12  py-12 sm:py-20 lg: py-12 sm:py-20 relative"
     >
       {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-50">
+      <div className="absolute inset-0 sm:opacity-50 opacity-5">
         <div className="absolute top-10 left-10 text-4xl sm:text-6xl">📧</div>
         <div className="absolute top-20 right-20 text-3xl sm:text-4xl">💬</div>
         <div className="absolute bottom-20 left-20 text-4xl sm:text-5xl">
@@ -278,7 +278,7 @@ export default function Contact() {
                   </div>
                   <Button
                     type="submit"
-                    className="w-full bg-gradient-to-r from-cyan-500 via-purple-500 fuchsia-400 hover:from-cyan-600 hover:via-purple-600 hover:to-magenta-600 text-white py-3 text-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+                    className="w-full bg-gradient-to-r from-cyan-500 via-purple-500 to-fuchsia-400 hover:from-cyan-600 hover:via-purple-600 hover:to-magenta-600 text-white py-3 text-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
                   >
                     <Send className="h-5 w-5 mr-2" />
                     Send Message

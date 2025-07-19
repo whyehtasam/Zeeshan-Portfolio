@@ -258,7 +258,7 @@ export default function Projects() {
       className="py-12  py-12 sm:py-20 lg: py-12 sm:py-20 relative"
     >
       {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-50">
+      <div className="absolute inset-0 sm:opacity-50 opacity-5">
         <div className="absolute top-10 left-10 text-4xl sm:text-6xl">💻</div>
         <div className="absolute top-20 right-20 text-3xl sm:text-4xl">💻</div>
         <div className="absolute bottom-20 left-20 text-4xl sm:text-5xl"></div>
@@ -287,7 +287,7 @@ export default function Projects() {
               onClick={() => setActiveCategory(category)}
               className={`transition-all duration-300 text-xs sm:text-sm px-3 sm:px-4 py-2 ${
                 activeCategory === category
-                  ? "bg-gradient-to-r from-cyan-500 via-purple-500 fuchsia-400 text-white shadow-lg hover:shadow-xl"
+                  ? "bg-gradient-to-r from-cyan-500 via-purple-500 to-fuchsia-400 text-white shadow-lg hover:shadow-xl"
                   : "border-gray-600 text-gray-300 hover:border-cyan-400 hover:text-cyan-400 hover:bg-cyan-400/10"
               }`}
             >
