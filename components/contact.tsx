@@ -119,7 +119,7 @@ export default function Contact() {
       className="py-12  py-12 sm:py-20 lg: py-12 sm:py-20 relative"
     >
       {/* Background Pattern */}
-      <div className="absolute inset-0 sm:opacity-50 opacity-5 ">
+      <div className="absolute inset-0 opacity-50">
         <div className="absolute top-10 left-10 text-4xl sm:text-6xl">📧</div>
         <div className="absolute top-20 right-20 text-3xl sm:text-4xl">💬</div>
         <div className="absolute bottom-20 left-20 text-4xl sm:text-5xl">
