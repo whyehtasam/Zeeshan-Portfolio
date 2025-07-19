@@ -1,11 +1,17 @@
-"use client"
+"use client";
 
-import { useEffect, useRef } from "react"
-import { gsap } from "gsap"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import { Calendar, Clock, ArrowRight } from "lucide-react"
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Calendar, Clock, ArrowRight } from "lucide-react";
 
 const blogPosts = [
   {
@@ -15,28 +21,33 @@ const blogPosts = [
     date: "2024-01-15",
     readTime: "8 min read",
     tags: ["Deep Learning", "Computer Vision", "TensorFlow"],
-    image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=400&h=200&fit=crop&crop=center",
+    image:
+      "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=400&h=200&fit=crop&crop=center",
   },
   {
     title: "Building Scalable Data Pipelines with Apache Spark",
-    excerpt: "Learn how to design and implement robust data processing pipelines for big data analytics.",
+    excerpt:
+      "Learn how to design and implement robust data processing pipelines for big data analytics.",
     date: "2024-01-08",
     readTime: "12 min read",
     tags: ["Big Data", "Apache Spark", "Data Engineering"],
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=200&fit=crop&crop=center",
+    image:
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=200&fit=crop&crop=center",
   },
   {
     title: "MLOps Best Practices: From Model to Production",
-    excerpt: "A practical guide to implementing MLOps workflows for seamless model deployment and monitoring.",
+    excerpt:
+      "A practical guide to implementing MLOps workflows for seamless model deployment and monitoring.",
     date: "2024-01-01",
     readTime: "10 min read",
     tags: ["MLOps", "DevOps", "Machine Learning"],
-    image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400&h=200&fit=crop&crop=center",
+    image:
+      "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400&h=200&fit=crop&crop=center",
   },
-]
+];
 
 export default function Blog() {
-  const sectionRef = useRef<HTMLDivElement>(null)
+  const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -55,25 +66,26 @@ export default function Blog() {
             start: "top 80%",
             toggleActions: "play none none reverse",
           },
-        },
-      )
-    }, sectionRef)
+        }
+      );
+    }, sectionRef);
 
-    return () => ctx.revert()
-  }, [])
+    return () => ctx.revert();
+  }, []);
 
   return (
-    <section id="blog" ref={sectionRef} className="py-20 relative">
+    <section id="blog" ref={sectionRef} className=" py-12 sm:py-20 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 fade-in">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Latest{" "}
-            <span className="bg-gradient-to-r from-cyan-400 to-magenta-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
               Insights
             </span>
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            Sharing knowledge and insights about AI, machine learning, data science, and emerging technologies.
+            Sharing knowledge and insights about AI, machine learning, data
+            science, and emerging technologies.
           </p>
         </div>
 
@@ -106,7 +118,9 @@ export default function Blog() {
                 <CardTitle className="text-white group-hover:text-cyan-400 transition-colors duration-300 line-clamp-2">
                   {post.title}
                 </CardTitle>
-                <CardDescription className="text-gray-400 line-clamp-3">{post.excerpt}</CardDescription>
+                <CardDescription className="text-gray-400 line-clamp-3">
+                  {post.excerpt}
+                </CardDescription>
               </CardHeader>
 
               <CardContent>
@@ -134,12 +148,12 @@ export default function Blog() {
         </div>
 
         <div className="text-center mt-12">
-          <Button className="bg-gradient-to-r from-cyan-500 to-magenta-500 hover:from-cyan-600 hover:to-magenta-600 text-white px-8 py-3 text-lg font-semibold transition-all duration-300 hover:scale-105">
+          <Button className="bg-gradient-to-r from-cyan-500 fuchsia-400 hover:from-cyan-600 hover:to-magenta-600 text-white px-8 py-3 text-lg font-semibold transition-all duration-300 hover:scale-105">
             View All Posts
             <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
         </div>
       </div>
     </section>
-  )
+  );
 }

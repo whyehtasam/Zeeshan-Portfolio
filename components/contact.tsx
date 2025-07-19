@@ -1,15 +1,23 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { useEffect, useRef, useState } from "react"
-import { gsap } from "gsap"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Label } from "@/components/ui/label"
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter } from "lucide-react"
+import { useEffect, useRef, useState } from "react";
+import { gsap } from "gsap";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Send,
+  Github,
+  Linkedin,
+  Twitter,
+} from "lucide-react";
 
 const contactInfo = [
   {
@@ -33,7 +41,7 @@ const contactInfo = [
     href: "#",
     color: "text-magenta-400",
   },
-]
+];
 
 const socialLinks = [
   {
@@ -54,16 +62,16 @@ const socialLinks = [
     href: "https://twitter.com/zeeshanahmadansari",
     color: "hover:text-cyan-400",
   },
-]
+];
 
 export default function Contact() {
-  const sectionRef = useRef<HTMLDivElement>(null)
+  const sectionRef = useRef<HTMLDivElement>(null);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     subject: "",
     message: "",
-  })
+  });
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -82,47 +90,57 @@ export default function Contact() {
             start: "top 80%",
             toggleActions: "play none none reverse",
           },
-        },
-      )
-    }, sectionRef)
+        }
+      );
+    }, sectionRef);
 
-    return () => ctx.revert()
-  }, [])
+    return () => ctx.revert();
+  }, []);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
-    })
-  }
+    });
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
+    e.preventDefault();
     // Handle form submission here
-    console.log("Form submitted:", formData)
-  }
+    console.log("Form submitted:", formData);
+  };
 
   return (
-    <section id="contact" ref={sectionRef} className="py-12 sm:py-16 lg:py-20 relative">
+    <section
+      id="contact"
+      ref={sectionRef}
+      className="py-12  py-12 sm:py-20 lg: py-12 sm:py-20 relative"
+    >
       {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
+      <div className="absolute inset-0 opacity-50">
         <div className="absolute top-10 left-10 text-4xl sm:text-6xl">📧</div>
         <div className="absolute top-20 right-20 text-3xl sm:text-4xl">💬</div>
-        <div className="absolute bottom-20 left-20 text-4xl sm:text-5xl">🚀</div>
-        <div className="absolute bottom-10 right-10 text-3xl sm:text-4xl">✨</div>
+        <div className="absolute bottom-20 left-20 text-4xl sm:text-5xl">
+          🚀
+        </div>
+        <div className="absolute bottom-10 right-10 text-3xl sm:text-4xl">
+          ✨
+        </div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-12 sm:mb-16 fade-in">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">
             Let's{" "}
-            <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-magenta-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-fuchsia-400 bg-clip-text text-transparent">
               Connect
             </span>
           </h2>
           <p className="text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto px-4">
-            Ready to collaborate on your next project? Let's discuss how we can work together to bring your ideas to
-            life.
+            Ready to collaborate on your next project? Let's discuss how we can
+            work together to bring your ideas to life.
           </p>
         </div>
 
@@ -138,7 +156,7 @@ export default function Contact() {
               </CardHeader>
               <CardContent className="space-y-4">
                 {contactInfo.map((info, index) => {
-                  const IconComponent = info.icon
+                  const IconComponent = info.icon;
                   return (
                     <a
                       key={index}
@@ -155,7 +173,7 @@ export default function Contact() {
                         <p className="text-white font-medium">{info.value}</p>
                       </div>
                     </a>
-                  )
+                  );
                 })}
               </CardContent>
             </Card>
@@ -163,12 +181,14 @@ export default function Contact() {
             {/* Social Links */}
             <Card className="contact-card bg-gray-900/50 border-gray-800 hover:border-purple-400/50 transition-all duration-300">
               <CardHeader>
-                <CardTitle className="text-xl font-semibold text-white">Follow Me</CardTitle>
+                <CardTitle className="text-xl font-semibold text-white">
+                  Follow Me
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="flex space-x-4">
                   {socialLinks.map((social, index) => {
-                    const IconComponent = social.icon
+                    const IconComponent = social.icon;
                     return (
                       <a
                         key={index}
@@ -179,7 +199,7 @@ export default function Contact() {
                       >
                         <IconComponent className="h-6 w-6" />
                       </a>
-                    )
+                    );
                   })}
                 </div>
               </CardContent>
@@ -190,7 +210,9 @@ export default function Contact() {
           <div className="lg:col-span-2">
             <Card className="contact-card bg-gray-900/50 border-gray-800 hover:border-magenta-400/50 transition-all duration-300">
               <CardHeader>
-                <CardTitle className="text-xl sm:text-2xl font-semibold text-white">Send a Message</CardTitle>
+                <CardTitle className="text-xl sm:text-2xl font-semibold text-white">
+                  Send a Message
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-6">
@@ -248,7 +270,7 @@ export default function Contact() {
                       name="message"
                       value={formData.message}
                       onChange={handleInputChange}
-                      rows={6}
+                      rows={5}
                       className="bg-gray-800 border-gray-700 text-white focus:border-cyan-400 focus:ring-cyan-400 resize-none"
                       placeholder="Tell me about your project or how we can collaborate..."
                       required
@@ -256,7 +278,7 @@ export default function Contact() {
                   </div>
                   <Button
                     type="submit"
-                    className="w-full bg-gradient-to-r from-cyan-500 via-purple-500 to-magenta-500 hover:from-cyan-600 hover:via-purple-600 hover:to-magenta-600 text-white py-3 text-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+                    className="w-full bg-gradient-to-r from-cyan-500 via-purple-500 fuchsia-400 hover:from-cyan-600 hover:via-purple-600 hover:to-magenta-600 text-white py-3 text-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
                   >
                     <Send className="h-5 w-5 mr-2" />
                     Send Message
@@ -269,12 +291,15 @@ export default function Contact() {
 
         {/* Call to Action */}
         <div className="mt-12 sm:mt-16 text-center">
-          <Card className="bg-gradient-to-r from-gray-900/80 to-gray-800/80 border-cyan-400/30 max-w-4xl mx-auto">
+          <Card className="bg-gradient-to-r from-gray-900/80 to-gray-800/80 border-cyan-400/30 max-w-full mx-auto">
             <CardContent className="pt-6 sm:pt-8 px-4 sm:px-6">
-              <h3 className="text-xl sm:text-2xl font-bold text-cyan-400 mb-4">Ready to Start Something Amazing?</h3>
+              <h3 className="text-xl sm:text-2xl font-bold text-cyan-400 mb-4">
+                Ready to Start Something Amazing?
+              </h3>
               <p className="text-base sm:text-lg text-gray-300 leading-relaxed mb-6">
-                Whether you're looking to build cutting-edge AI solutions, analyze complex datasets, or develop
-                innovative embedded systems, I'm here to help bring your vision to reality.
+                Whether you're looking to build cutting-edge AI solutions,
+                analyze complex datasets, or develop innovative embedded
+                systems, I'm here to help bring your vision to reality.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white px-6 sm:px-8 py-3 font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl">
@@ -282,7 +307,7 @@ export default function Contact() {
                 </Button>
                 <Button
                   variant="outline"
-                  className="border-2 border-magenta-400 text-magenta-400 hover:bg-gradient-to-r hover:from-magenta-400 hover:to-magenta-500 hover:text-white transition-all duration-300 hover:scale-105 px-6 sm:px-8 py-3 font-semibold bg-transparent"
+                  className="border-2 border-magenta-400 text-magenta-400 hover:bg-gradient-to-r hover:from-magenta-400 hover:fuchsia-400 hover:text-white transition-all duration-300 hover:scale-105 px-6 sm:px-8 py-3 font-semibold bg-transparent"
                 >
                   View Portfolio
                 </Button>
@@ -292,5 +317,5 @@ export default function Contact() {
         </div>
       </div>
     </section>
-  )
+  );
 }

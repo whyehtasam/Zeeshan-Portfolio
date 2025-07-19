@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import { Button } from "@/components/ui/button"
-import { Github, Linkedin, Mail, Download, Heart } from "lucide-react"
+import { Button } from "@/components/ui/button";
+import { Github, Linkedin, Mail, Download, Heart } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -10,12 +10,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Brand & Description */}
           <div className="space-y-4">
-            <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-magenta-400 bg-clip-text text-transparent">
+            <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
               Zeeshan Ahmad Ansari
             </h3>
             <p className="text-gray-400 leading-relaxed">
-              Data Scientist & AI/ML Engineer passionate about transforming data into actionable insights and building
-              intelligent systems that drive innovation.
+              Data Scientist & AI/ML Engineer passionate about transforming data
+              into actionable insights and building intelligent systems that
+              drive innovation.
             </p>
             <div className="flex space-x-4">
               <Button
@@ -46,13 +47,23 @@ export default function Footer() {
           <div className="space-y-4">
             <h4 className="text-lg font-semibold text-white">Quick Links</h4>
             <ul className="space-y-2">
-              {["About", "Projects", "Skills", "Goals", "GitHub", "Timeline", "Blog"].map((link) => (
+              {[
+                "About",
+                "Projects",
+                "Skills",
+                "Goals",
+                "GitHub",
+                "Timeline",
+                "Blog",
+              ].map((link) => (
                 <li key={link}>
                   <button
                     onClick={() => {
-                      const element = document.querySelector(`#${link.toLowerCase()}`)
+                      const element = document.querySelector(
+                        `#${link.toLowerCase()}`
+                      );
                       if (element) {
-                        element.scrollIntoView({ behavior: "smooth" })
+                        element.scrollIntoView({ behavior: "smooth" });
                       }
                     }}
                     className="text-gray-400 hover:text-cyan-400 transition-colors duration-200"
@@ -67,8 +78,11 @@ export default function Footer() {
           {/* Contact & Resume */}
           <div className="space-y-4">
             <h4 className="text-lg font-semibold text-white">Get In Touch</h4>
-            <p className="text-gray-400">Interested in collaboration or have a project in mind? Let's connect!</p>
-            <Button className="bg-gradient-to-r from-cyan-500 via-purple-500 to-magenta-500 hover:from-cyan-600 hover:via-purple-600 hover:to-magenta-600 text-white w-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+            <p className="text-gray-400">
+              Interested in collaboration or have a project in mind? Let's
+              connect!
+            </p>
+            <Button className="bg-gradient-to-r from-cyan-500 via-purple-500 fuchsia-400 hover:from-cyan-600 hover:via-purple-600 hover:to-magenta-600 text-white w-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
               <Download className="h-4 w-4 mr-2" />
               Download Resume
             </Button>
@@ -84,5 +98,5 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }

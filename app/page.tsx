@@ -1,23 +1,24 @@
-"use client"
+"use client";
 
-import { useEffect } from "react"
-import { gsap } from "gsap"
-import { ScrollTrigger } from "gsap/ScrollTrigger"
-import Hero from "@/components/hero"
-import Navigation from "@/components/navigation"
-import About from "@/components/about"
-import Projects from "@/components/projects"
-import Skills from "@/components/skills"
-import CareerGoals from "@/components/career-goals"
-import GitHubStats from "@/components/github-stats"
-import Timeline from "@/components/timeline"
-import Blog from "@/components/blog"
-import Footer from "@/components/footer"
-import AnimatedBackground from "@/components/animated-background"
-import Contact from "@/components/contact"
+import { useEffect } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Hero from "@/components/hero";
+import Navigation from "@/components/navigation";
+import About from "@/components/about";
+import Projects from "@/components/projects";
+import Skills from "@/components/skills";
+import CareerGoals from "@/components/career-goals";
+import GitHubStats from "@/components/github-stats";
+import Timeline from "@/components/timeline";
+import Blog from "@/components/blog";
+import Footer from "@/components/footer";
+import AnimatedBackground from "@/components/animated-background";
+import Contact from "@/components/contact";
+import EngineeringEdge from "@/components/engineering-edge";
 
 if (typeof window !== "undefined") {
-  gsap.registerPlugin(ScrollTrigger)
+  gsap.registerPlugin(ScrollTrigger);
 }
 
 export default function Home() {
@@ -36,8 +37,8 @@ export default function Home() {
           start: "top 80%",
           toggleActions: "play none none reverse",
         },
-      },
-    )
+      }
+    );
 
     // Parallax background elements
     gsap.to(".parallax-slow", {
@@ -49,7 +50,7 @@ export default function Home() {
         end: "bottom top",
         scrub: true,
       },
-    })
+    });
 
     gsap.to(".parallax-fast", {
       yPercent: -100,
@@ -60,8 +61,8 @@ export default function Home() {
         end: "bottom top",
         scrub: true,
       },
-    })
-  }, [])
+    });
+  }, []);
 
   return (
     <div className="min-h-screen bg-gray-950 text-white overflow-x-hidden">
@@ -70,15 +71,16 @@ export default function Home() {
       <main>
         <Hero />
         <About />
+        <EngineeringEdge />
         <Projects />
         <Skills />
         <CareerGoals />
         <GitHubStats />
         <Timeline />
-        <Blog />
+        {/* <Blog /> */}
         <Contact />
       </main>
       <Footer />
     </div>
-  )
+  );
 }
